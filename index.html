@@ -1,147 +1,35 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>blueSquare: Page Won</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Blog Personal">
-    <meta name="author" content="William Wood">
-		<link href='http://fonts.googleapis.com/css?family=Nova+Slim' rel='stylesheet' type='text/css'>
+<head>
+	<meta charset="UTF-8">
+	<title>blueSquare Blog</title>
+	<link href='http://fonts.googleapis.com/css?family=Finger+Paint' rel='stylesheet' type='text/css'>
 	<style>
 		body{
 			background-color:#202020;
-			color:White;
-			font-family: 'Nova Slim', cursive;
+			color:#ffffff;
+			font-family: 'Finger Paint', cursive;
+			text-transform:lowercase;
 		}
-		#container{
-			margin-left:auto;
-			margin-right:auto;
-			width:800px;
+		article{
+			width:860px;
+			margin:0px auto 100px auto;
 		}
-
-
-		#articlecollection{
-			 margin-top:150px;
+		img{
+			width:860px;
 		}
-		#articlecollection article .code{
-			color:#ffb03b;
-			margin-top:10px;
-		}
-		#articlecollection article .links{
-			color:#ffb03b;
-			margin-top:10px;
-		}
-		a{
-			color:#11d2ff;
-			text-decoration:none;
-		}
-		a:hover{
-			color:white;
-		}
-		
-		.bannercollection{
-			width:800px;
-			overflow:hidden;
-			clear:both;
-			height:250px;
-		}
-    </style>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
-	<script type="text/javascript">
-		(function($){
-			var JSONObject
-			var bw = jQuery.noConflict();
-			bw(document).ready(function(){
-				//Think this through
-				//home stays put, always open
-					//home clicked, all of them close
-					
-				//left	- the ones open or below open
-					//when left clicked, all open and above open go to the right
-				
-				//right - the ones not open or above open
-					//when right clicked, all open and below go the the left
-				
-				var banners = [];
-				//console.log(banners);
-				bw('.bannercollection img').each(function(index){
-					
-					banners[index] = bw(this);
-					banners[index].id = index;
-					banners[index].status = (index==0)?'open':'closed';
-					banners[index].open = function(){
-						this.animate({'left':'-='+580},1000);
-						console.log('should have openned');
-					};
-					banners[index].close = function(){
-						this.animate({'left':'+='+580},1000);
-					};
-
-					banners[index].css({
-						'position':'relative',
-						'left':(index==0)?0:(580+(index*74)),
-						'top':(-1*(index*254))
-					});
-					
-					
-					
-				}).click(function(){
-					for(i=1;i<banners.length;i++){
-						if(i<=bw(this).index()){
-							if(banners[i].status != 'open'){
-								banners[i].open();
-								banners[i].status = 'open';
-								console.log(bw(this).index()+' '+i+' open');
-							}
-						}
-						else
-						{
-							if(banners[i].status != 'closed'){
-								banners[i].close();
-								banners[i].status = 'closed';
-								console.log(bw(this).index()+' '+i+' close');
-							}
-						}
-					};
-				});
-				
-				
-				console.log('made it to the buttom');
-			});
-		})(jQuery);
-	</script>
-  </head>
-
-  <body>
-	<div id="container">
-		 		
-		<div class="bannercollection">
-			<img src="img/banta.png"/>
-			<img src="img/bantb.png"/>
-			<img src="img/bantc.png"/>
-		</div>
-		
-		<div id="articlecollection">
-			<article >
-				Welcome to blueSquare.
-					<br />
-					I built blueSquare so that I have an "idea outlet". This is a place where I can think about the events that take place around me and the continual advancement of modern technology. Please feel free to read or play with anything I put on this site *that you can get to :)*. Enjoy...
-
-				<div class="code">
-					**************<br />
-					&nbsp;&nbsp;&nbsp;&nbsp;(function($){<br />
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log('Hello Motto');<br />
-					&nbsp;&nbsp;&nbsp;&nbsp;})(jQuery);<br />
-					**************
-				</div >
-				<div class="links">
-					<a href="#">This is a link</a>
-				</div >
-				<div class="sig">
-					-Bill Wood
-				</div>
-			</article>
-		</div>
-	</div>
-  </body>
+	</style>
+</head>
+<body>
+	<article>
+	<img src="lonesurvivor.png" alt="picture"/>
+	<h3>I... finished?</h3>
+	<p>Today I finally made it a priority to complete the indie game Lone Survivor. The game is not a lengthy one so my advise to anyone looking to pick it up... play it all at once. I spent to much time inbetween each play session and here I sit confused of what it was all for; Which fans of the game can argue was probably the point... sure.</p>
+	</article>
+	<article>
+	<img src="squares.png" alt="picture"/>
+	<h3>Design Hiatus</h3>
+	<p>In the future blueSquare will be a place that I can show off my design idea. This thought has carried me though so many differant iterations of the site. But the thing that was really holding me back was the fact that I had never started to actually talk about any of my ideas. I was running with the idea that my first work for the website would be a "freebie" while the rest would have fantastic documentation. I believe I'm starting to see that without blogging while working, I'm stunting my ability to grow and review during the process. So for now things at silly simple and we use this as a base.</p>
+	</article>
+</body>
 </html>
