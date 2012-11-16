@@ -12,75 +12,61 @@
 	<link rel="stylesheet/css" type="text/css" href="css/bootstrap-responsive.min.css">
 	-->
 		
-	 <style>
-      body {
-		font-family: Arial;
-		color:white;
-		background-color:rgba(37,92,146,.3);
-      }
-	  ul{
-		margin:auto;
-		list-style-type:none;
-	  }
+	<style>
+		body{
+			font-family:verdana;
+			background-image:url('http://upload.wikimedia.org/wikipedia/commons/d/d4/New_York_City_at_night_HDR_edit1.jpg');
 
-	  li{
-		margin-top:120px;
-		border-left:4px solid white;
-		border-bottom:2px solid white;
-		text-align:right;
-		line-height:11px;
-	  }
-	  article{
-		text-align:left;
-		padding-left:20px;
-		padding-bottom:10px;
-		font-size:22px;
-		line-height:22px;
-	  }
-	  article a.source{
-		color:rgba(237,139,53,1);
-		text-decoration:none;
-		font-size:17px;
-	  }
-	  article a.source:hover{
-		padding-right:15px;
-		border-right:3px solid white;
-	  }
-	  input{
-		background-color:rgba(0,0,0,0);
-		border-left:0px none white;
-		border-bottom:0px none white;
-		border-right:1px solid white;
-		border-top:4px solid white;
-		color:white;
-		font-size:40px;
-		float:right;
-		width:300px;
-		margin-right:6%;
-	  }
-	  #icon{
-		width:13%;
-		margin-left:2%;
-		padding-bottom:2%;
-	  }
-	  #title{
-		width:80%;
-		margin-left:2%;
-		margin-right:2%;
-	  }
-	   #json{
-		width:800px;
-		margin-left:auto;
-		margin-right:auto;
-	  }
-	  #hotlinks,#categorySearch{
-		clear:both;
-	  }
-	  #hotlinks{
-	  		/* border-left:4px solid white; */
-	  		border-right:4px solid white;
-			border-bottom:2px solid white;
-	  }
+		}
+		#cover{
+			position:absolute;
+			left:0px;
+			top:0px;
+			width:100%;
+			height:100%;
+			background-image:url('img/fog.png');
+			background-color:rgba(17,210,255,.2);
+			z-index:-1;
+		}
+		#menu{
+
+			background-color:#202020;
+			border-radius:4px;
+			width:100px;
+			padding-left:10px;
+			padding-right:1px;
+			padding-top:10px;
+			padding-bottom:1px;
+
+		}
+		#menu #logo{
+			width:100px;
+		}
+		#menu ul{
+			padding:0px;
+			margin:0px;
+		}
+		#menu ul li{
+			list-style-type:none;
+		}
+		#menu ul li a {
+			display:block;
+			width:92px;
+			height:60px;
+			text-decoration:none;
+			color:#202020;
+			background-color:#ffffff;
+			text-align:center;
+			vertical-align:middle;
+			border-radius:4px;
+			margin-left:4px;
+			margin-bottom:10px;
+			padding-top:40px;
+		}
+		#menu ul li a:hover {
+			color:#000000;
+			background-color:#11d2ff;
+		}
     </style>
     
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -92,26 +78,17 @@
   </head>
 
   <body>
-	<img id="icon" alt="blueSquare Logo" src="img/icon.png" />
-	<img id="title" alt="blueSquare Title" src="img/title.png" />
-	<div id="categorySearch">
-		<input id="category" type="text" placeholder="talking about..." />
+		<div id="cover">
 	</div>
-	<div id="json">
+	<div id="menu">
+		<img alt="logo" id="logo" src="img/logo.png" />
 		<ul>
-			<li>
-				<article class="website october 26 2012 welcome">
-					Welcome! I feel that it would be redundant to tell you where you are, no matter how curious I am as to how you arrived. Feel free to look around. Click, drag, swipe, or scroll your heart out. :)
-				</article>
-				Now
-			</li>
-			<li>
-				<article class="website october 26 2012 style update">
-					Under Construction
-				</article>
-				Now
-			</li>
+			<li><a href="http://bluesquare.comlu.com">home</a></li>
+			<li><a>blog</a></li>
+			<li><a>concepts</a></li>
+			<li><a>contact</a></li>
 		</ul>
 	</div>
+
   </body>
 </html>
